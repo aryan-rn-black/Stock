@@ -157,8 +157,14 @@ function updateUI() {
   document.getElementById("orders").innerHTML =
     orders.map(o => `<div>${o}</div>`).join("");
 }
-
+window.onload = function() {
+  // Your JavaScript code here
+  console.log("The entire page has fully loaded.");
+    var panel1 = document.getElementById("chart");
+    panel1.style.display = "none";
+};
 /* ------------------ START ------------------ */
 showInfo("pros");
 updateUI();
 timer = setInterval(tick, intervalMs);
+
