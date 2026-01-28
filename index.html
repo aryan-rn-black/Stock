@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grow Style Trading App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Lightweight Charts -->
+
+   <!--<script src="https://unpkg.com/lightweight-charts@3.8.0/dist/lightweight-charts.standalone.production.js"></script>-->
+       <script src="https://unpkg.com/lightweight-charts@3.8.0/dist/lightweight-charts.standalone.production.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>📈 Grow-Style Trading App</header>
+
+  <!-- Watchlist -->
+  <div class="watchlist">
+    <button onclick="switchStock('TCS')">TCS</button>
+    <button onclick="switchStock('RELIANCE')">RELIANCE</button>
+    <button onclick="switchStock('INFY')">INFY</button>
+  </div>
+
+  <!-- Chart -->
+   <div id="toggleGraphBtn" onclick="toggleGraph()"><div id="textBtn">candle-chart</div></div>
+   <div id="chart" ></div>
+   <div id="candle-chart"></div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button class="buy" onclick="buy()">BUY</button>
+    <button class="sell" onclick="sell()">SELL</button>
+
+    <select id="speed" onchange="changeSpeed()" style="color: black;">
+      <option value="1000">1 sec</option>
+      <option value="2000">2 sec</option>
+      <option value="5000">5 sec</option>
+    </select>
+  </div>
+
+  <!-- Portfolio -->
+  <div class="card">
+    <h3>Portfolio</h3>
+    <p>Balance: ₹<span id="balance"></span></p>
+    <p>Shares: <span id="shares"></span></p>
+    <p>Avg Price: ₹<span id="avg"></span></p>
+    <p class="pl">P/L: ₹<span id="pl"></span></p>
+  </div>
+
+  <!-- Pros / Cons -->
+  <div class="card">
+    <div class="toggle">
+      <button onclick="showInfo('pros')">Pros</button>
+      <button onclick="showInfo('cons')">Cons</button>
+    </div>
+    <div id="info"></div>
+  </div>
+
+  <!-- Orders -->
+  <div class="card" style="overflow-x: hidden;overflow-y: scroll;height:  20vh;">
+    <h3>Order History</h3>
+    <div id="orders"></div>
+  </div>
+
+  <script type src="script.js"></script>
+</body>
+</html>
