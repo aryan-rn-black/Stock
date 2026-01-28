@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+header {
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.watchlist {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.watchlist button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#chart {
+  width: 100vw;
+  height: 300px;
+  margin: 10px;
+}
+#candle-chart{
+  width: 100vw;
+  height: 400px;
+  margin: 10px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
+
+.buy { background: #16a34a; }
+.sell { background: #dc2626; }
+
+.controls button,
+.controls select {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.card {
+  background: #1e293b;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.toggle button {
+  flex: 1;
+  padding: 6px;
+  cursor: pointer;
+}
+
+#orders div {
+  border-bottom: 1px solid #334155;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.pl {
+  font-weight: bold;
+}
